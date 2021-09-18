@@ -16,8 +16,7 @@ public class JokeResource {
     }
 
     @RequestMapping("/jokes")
-    public String getNextJoke(Model model) {
-
+    public String showJoke(Model model) {
         model.addAttribute("joke", this.jokeService.getNextJoke());
         return "joke";
     }
